@@ -1,0 +1,34 @@
+textanim8 - text animation
+--------------------------
+
+
+What is this?
+
+textanim8 is a program that uses ncurses to create small animations in your terminal!
+in order to make them, you should be able to know C++!
+
+
+How to make!!
+
+textanim8 (ta8) animations are pretty simple.
+
+the ta8 screen is 50x50 pixels and they are referenced as 49x49
+
+crFrame(std::vector<Frame>& frame_list) - Create a frame
+This function will create an empty frame structure and it will push it to the
+frame vector that was given.
+
+mdFrame(Frame& frame, int xpos, int ypos, char ch) - Modify a frame's data
+This function modifies frame's contents at xpos by ypos. If the function
+returns true, then the modification failed (debug purposes only)
+
+dlFrame(std::vector<Frame>& frame_list, int fpos) - Delete a frame
+You won't really need this function but it's here for testing purposes. It basically
+deletes a frame in frame_list at fpos.
+
+The animation will be in the `anim.cc` file and in order to use it you must re-compile the
+program. Feel free to use the existing file as a reference.
+
+Just don't forget to have fun!
+
+			~ vortex (garbage dev)
